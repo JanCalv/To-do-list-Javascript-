@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;   
+    background-color: #ffe8df;
+}
+
+.page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container{
+    background-color: #ffffff;
+    padding: 2em;
+    width: 50%;
+    border-radius: 1em;
+    box-shadow: .5em 1em #00000036;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-top: 3em;
+}
+
+
+
+/* TOP CONTENT */
+.top-content {
+    /* background-image: url('/img/top-bg.jpeg'); */
+    background-color: #9f29af;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+.top-content-text-header {
+    font-size: 2.8em;
+    color: #ffffff;
+}
+
+.date-time {
+    color: #ffffff;
+    display: block;
+    font-size: 1.5em;
+    line-height: 1.5em;
+}
+
+/* LIST CONTAINER */
+.list-content{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    margin: 1em 0;
+    position: relative;
+    overflow: auto; 
+    padding: 2em 2em;
+}
+
+.list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2em;
+    padding: .8em;
+    margin: 1.5em 0;
+    border-radius: 2em;
+    background-color: #ffe8df4b;
+}
+
+.list-description {
+    width: 50%;
+    overflow:hidden;
+    pointer-events: none;
+    text-align: center;
+}
+.fa-minus-circle, .fa-check-square {
+    color: #888888;
+    cursor: pointer;    
+}
+
+.fa-check-square {
+    margin-left: .2em;
+}
+
+.fa-check-square:hover {
+    color: green
+}
+
+.fa-minus-circle:hover {
+    color: rgb(156, 26, 26);
+    transition: .4s;
+}
+
+.completed {
+    background-color: #aef090;
+    position: relative;
+}
+
+.completed::before {
+    content: 'Finished.';
+    background-color: green;
+    font-size: 1.2em;
+    color: white;
+    border: 1px solid black;
+    font-weight: 700;
+    padding: 1px;
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* .complete-tag {
+    display: none;
+} */
+
+/* ADD CONTENT */
+.add-content{
+    display: flex;
+    flex-direction: row;
+}
+
+.add-btn{
+    margin-right: .5em;
+    color: #8F90E7;
+    cursor: pointer;
+}
+.add-btn:hover {
+    color: #E299EB;
+    transition: .2s;
+}
+
+.text-box {
+    width: 100%;
+    font-size: 2em;
+    padding: .1em .5em;
+}
+
+@media (max-width: 425px) {
+	.app-container{
+        padding: 2em .3em;
+        width: 100%;
+        border-radius: .3em;
+        box-shadow: 0em 0em #00000036;
+    }
+    
+    
+    
+    /* TOP CONTENT */
+    .top-content {
+        padding: 1em;
+    }
+    .top-content-text-header {
+        font-size: 1.7em;
+    }
+    
+    .date-time {
+        font-size: 1.2em;
+    }
+    
+    /* LIST CONTAINER */
+    .list-content{
+        height: 60vh;
+        margin: .2em 0;
+        padding: 1em 2em;
+    }
+    
+    .list{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1em;
+        padding: .8em;
+        margin: .8em 0;
+        border-radius: 2em;
+        background-color: #ffe8df4b;
+    }
+    
+    .completed {
+        background-color: #aef090;
+        position: relative;
+    }
+
+    .completed::before {
+        content: 'Finished.';
+        background-color: green;
+        font-size: 1em;
+        border: 0px solid black;
+        top: 50%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+    }
+    
+    
+    /* ADD CONTENT */
+    .add-content{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .add-btn{
+        margin-right: .4em;
+        margin-left: .2em;
+        color: #8F90E7;
+        cursor: pointer;
+        font-size: .2em;
+    }
+    .add-btn:hover {
+        color: #E299EB;
+        transition: .2s;
+    }
+    
+    .text-box {
+        width: 70%;
+        font-size: 1.5em;
+        padding: 0em 0em;
+    }
+}
